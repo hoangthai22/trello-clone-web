@@ -1,0 +1,84 @@
+@import "../../setting";
+
+.column {
+  flex: 0 0 auto;
+  width: 300px;
+  height: $column-height;
+
+  // khoong phải phần tửu cuối cùng thì margin
+  margin-left: $gap;
+
+  > * {
+    background-color: $list-color;
+    padding: 0 8px;
+  }
+  header.column-drag-handle {
+    padding: 5px 8px;
+    height: $column-footer-height;
+    line-height: $column-header-height;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    .column-title{
+      flex:90%
+    }
+    .column-dropdown-actions{
+      flex:10%;
+
+      button.dropdown-btn{
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+        height: 32px;
+        margin-top: -15px;
+        letter-spacing: 1px;
+        background-color: $list-color;
+        border-color: $list-color;
+        color: $app-main-text-color;
+        &:after{
+          content:'...';
+          border: none;
+          vertical-align: 1.255em;
+        }
+
+        &:hover{
+          background-color: darken($list-color, 10);
+          border-color: darken($list-color, 10);
+        }
+      }
+      .dropdown-menu{
+        padding: 0;
+        min-width: 200px;
+        a.dropdown-item {
+          padding: 0.1rem 1rem;
+          font-size: 14px;
+          &:not(:last-child){
+            border-bottom: 1px solid darken($list-color, 10);
+          }
+        }
+      }
+    }
+    
+   
+   
+    
+  }
+  footer {
+    padding-left: 10px;
+    height: 40px;
+    line-height: 36px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #888;
+    .footer-ations{
+      margin-left: $gap;
+      cursor: pointer;
+      &:hover{
+        color: $app-main-text-color;
+      }
+    }
+  }
+}

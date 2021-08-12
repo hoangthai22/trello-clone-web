@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600");
+
+@import "./_setting.scss";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.trello-master {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $primary-color;
+  color: $app-main-text-color;
+  .icon {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+  .trello-container{
+    margin: 0 15px;
+    padding: 0;
+  }
+  .btn:focus, .btn:active{
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .input-edit-title-column{
+    background-color: inherit;
+    border:none;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    &:focus{
+      background-color: white;
+      border:1px solid $input-border-color
+    }
+  }
+
+  span.cancel-icon {
+    margin-left: $gap;
+      i{
+        font-size: 20px;
+        cursor: pointer;
+        color:rgba(150, 150, 200, 1);
+        &:hover{
+          color: darken(#333, 10);
+        }
+      }
+  }
+}

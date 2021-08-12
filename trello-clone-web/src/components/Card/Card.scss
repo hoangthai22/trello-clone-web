@@ -1,0 +1,64 @@
+@import "../../setting";
+
+.card-list {
+  margin: 0;
+  overflow-y: auto;
+  max-height: calc(
+    #{$column-height} - #{$column-header-height} - #{$column-footer-height}
+  );
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 11px;
+  }
+  //css cho thanh crossbar
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($list-color, 15);
+    border-right: 5px $list-color solid;
+  }
+
+  .card-ghost {
+    transition: transform 0.18s ease;
+    transform: rotateZ(5deg);
+    font-weight: bold;
+  }
+
+  .card-ghost-drop {
+    transition: transform 0.18s ease-in-out;
+    transform: rotateZ(0deg);
+    font-weight: bold;
+  }
+  .drop-preview {
+    background-color: rgba(150, 150, 200, 0.1);
+    border: 1px dashed #abc;
+    margin: 5px;
+  }
+
+  .card-item {
+    background-color: white;
+    padding: $gap;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    // khoong phải phần tửu cuối cùng thì margin
+    margin-bottom: $gap;
+    img {
+      display: block;
+      // width: calc(100% + 2 * #{$gap});
+      // margin: -$gap 0 $gap (-$gap);
+      margin: 0;
+      max-width: 100%;
+      max-height: 100%;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    cursor: pointer;
+  }
+  .add-new-card-area{
+    .input-enter-new-card{
+      min-height: 54px;
+      max-height: 162px;
+      
+    }
+  }
+}

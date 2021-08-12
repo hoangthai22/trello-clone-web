@@ -1,0 +1,11 @@
+$appbar-color: #0067a3;
+@import "../../setting";
+
+.navbar-app {
+  height: $appbar-height;
+  background-color: $appbar-color;
+  font-size: 1.5rem;
+  padding-left: $gap;
+  display: flex;
+  align-items: center;
+}
